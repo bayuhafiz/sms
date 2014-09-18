@@ -1,10 +1,5 @@
 <?php
-
-
-
-	include ( "NexmoMessage.php" );
-
-
+	include ( "lib/NexmoMessage.php" );
 	/**
 	 * To send a text message.
 	 *
