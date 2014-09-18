@@ -3,8 +3,11 @@ include ( "lib/NexmoAccount.php" );
 include ( "lib/NexmoMessage.php" );
 include ( "lib/NexmoReceipt.php" );
 
+$no = $_POST['phone_no'];
+$txt = $_POST['sms_body'];
+
 	$sms = new NexmoMessage('6e4d6866', '2af8f65e');
-    $sms->sendText( '+6287759940070', 'MyApp', 'Hello world!' );
+    $sms->sendText( $no, 'MyApp', $txt );
 
     $receipt = new NexmoReceipt();
      if ($receipt->exists()) {
